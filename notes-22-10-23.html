@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="generator" content="pandoc" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
-  <title>deelan</title>
+  <title>22 October 2023</title>
   <style>
     html {
       line-height: 1.5;
@@ -150,14 +150,17 @@
   <![endif]-->
 </head>
 <body>
+<header id="title-block-header">
+<h1 class="title">22 October 2023</h1>
+</header>
 <h2 id="linear-approximation">Linear Approximation</h2>
 <p>For a function <span class="math inline">\(f\)</span> and known values for <span class="math inline">\(f(a)\)</span> and <span class="math inline">\(f&#39;(a)\)</span> at <span class="math inline">\(x=a\)</span>, we can create an approximation for <span class="math inline">\(f\)</span> in the neighborhood of <span class="math inline">\(a\)</span>: <span class="math display">\[
 L(x)=f(a)+f&#39;(a)\cdot(x-a)
 \]</span> We are essentially taking the value of <span class="math inline">\(f\)</span> at <span class="math inline">\(x=a\)</span> and pretending its instantaneous rate of change (<span class="math inline">\(f&#39;(a)\)</span>) extends everywhere else</p>
 <h3 id="example">Example</h3>
-<p>Find the linear approximation <span class="math inline">\(L(x)\)</span> of the function <span class="math inline">\(f(x) = \sqrt{1-x}\)</span> at <span class="math inline">\(a=0\)</span>. <span class="math display">\[f(0) = \sqrt{1-0} = 1\]</span> <span class="math display">\[f&#39;(0) = -\frac{1}{2\sqrt{1-0}} = -\frac{1}{2}\]</span> <span class="math display">\[L(x) = 1 - \frac{1}{2}(x-0) = 1-\frac{1}{2}x\]</span></p>
+<p><strong>Find the linear approximation <span class="math inline">\(L(x)\)</span> of the function <span class="math inline">\(f(x) = \sqrt{1-x}\)</span> at <span class="math inline">\(a=0\)</span>.</strong> <span class="math display">\[f(0) = \sqrt{1-0} = 1\]</span> <span class="math display">\[f&#39;(0) = -\frac{1}{2\sqrt{1-0}} = -\frac{1}{2}\]</span> <span class="math display">\[L(x) = 1 - \frac{1}{2}(x-0) = 1-\frac{1}{2}x\]</span></p>
 <h3 id="example-1">Example</h3>
-<p>Use a linear approximation (or differentials) to estimate <span class="math inline">\((1.999)^4\)</span>:</p>
+<p><strong>Use a linear approximation (or differentials) to estimate <span class="math inline">\((1.999)^4\)</span>:</strong></p>
 <p>With linear approximation: <span class="math display">\[f(x) = x^4, f&#39;(x) = 4x^3, a = 2\]</span> <span class="math display">\[L(x)=2^4+4(2)^3\cdot(x-2)=16+32(x-2)\]</span> <span class="math display">\[L(1.999) = 16+32(-0.001) = 15.968\]</span></p>
 <h2 id="differentials">Differentials</h2>
 <p>The differential expresses how a function <span class="math inline">\(y = f(x)\)</span> of <span class="math inline">\(x\)</span> changes when <span class="math inline">\(x\)</span> changes infinitesimally (i.e. how small changes of <span class="math inline">\(x\)</span> produce a change in <span class="math inline">\(y\)</span>).</p>
@@ -166,12 +169,12 @@ L(x)=f(a)+f&#39;(a)\cdot(x-a)
 <p><span class="math inline">\(dy\)</span> is an approximation of how a function changes around a point based on its derivative: <span class="math display">\[dy = f&#39;(x)\,\Delta x = \left(\frac{dy}{dx}\right)\Delta x\]</span> (Here <span class="math inline">\(\Delta x\)</span> is taking the place of <span class="math inline">\(dx\)</span>, representing a small, but discrete, change in <span class="math inline">\(x\)</span>: we use <span class="math inline">\(d\)</span> to notate an infinitely small change and <span class="math inline">\(\Delta\)</span> to notate a finitely small change)</p>
 <p>Meanwhile, <span class="math inline">\(\Delta y\)</span> tells us the actual change in the value of <span class="math inline">\(f\)</span> with a change (<span class="math inline">\(\Delta x\)</span>) in <span class="math inline">\(x\)</span>: <span class="math display">\[\Delta y = f(x+\Delta x)-f(x)\]</span></p>
 <h3 id="example-2">Example</h3>
-<p>Find the differential of the function <span class="math inline">\(y = \theta^4\sin(8\theta)\)</span>. <span class="math display">\[\frac{dy}{dx}=4\theta^3\sin(8\theta)+8\theta^4\cos(8\theta)\]</span> <span class="math display">\[dy = 4\theta^3\sin(8\theta)+8\theta^4\cos(8\theta)\,dx\]</span></p>
+<p><strong>Find the differential of the function <span class="math inline">\(y = \theta^4\sin(8\theta)\)</span>.</strong> <span class="math display">\[\frac{dy}{dx}=4\theta^3\sin(8\theta)+8\theta^4\cos(8\theta)\]</span> <span class="math display">\[dy = 4\theta^3\sin(8\theta)+8\theta^4\cos(8\theta)\,dx\]</span></p>
 <h3 id="example-3">Example</h3>
-<p>Compute <span class="math inline">\(\Delta y\)</span> and <span class="math inline">\(dy\)</span> for the given values of <span class="math inline">\(x\)</span> and <span class="math inline">\(dx = \Delta x\)</span>. (Round to three decimal places) <span class="math inline">\(y = \sqrt{x-1}, x = 2, \Delta x = 0.8\)</span></p>
+<p><strong>Compute <span class="math inline">\(\Delta y\)</span> and <span class="math inline">\(dy\)</span> for the given values of <span class="math inline">\(x\)</span> and <span class="math inline">\(dx = \Delta x\)</span>. (Round to three decimal places)</strong> <span class="math inline">\(y = \sqrt{x-1}, x = 2, \Delta x = 0.8\)</span></p>
 <p><span class="math display">\[\Delta y = \sqrt{(2 + 0.8) - 1} - \sqrt{2 - 1} = \sqrt{1.8} - \sqrt{1} = 1.341 - 1 = 0.341\]</span> <span class="math display">\[dy = \frac{1}{2\sqrt{2-1}}\cdot0.8 = \frac{1}{2}\cdot 0.8 = 0.4\]</span> <img src="Pasted%20image%2020231021234227.png" alt="graph" /></p>
 <h3 id="example-4">Example</h3>
-<p>Use differentials to estimate <span class="math inline">\((1.999)^4\)</span>: <span class="math display">\[y = x^4\]</span> <span class="math display">\[dy = 4x^3\,dx = 4(2)^3\cdot(-0.001)=-0.032\]</span> <span class="math display">\[(1.999)^4 \approx 2^4 - 0.032 = 15.968\]</span></p>
+<p><strong>Use differentials to estimate <span class="math inline">\((1.999)^4\)</span>:</strong> <span class="math display">\[y = x^4\]</span> <span class="math display">\[dy = 4x^3\,dx = 4(2)^3\cdot(-0.001)=-0.032\]</span> <span class="math display">\[(1.999)^4 \approx 2^4 - 0.032 = 15.968\]</span></p>
 <h2 id="hyperbolic-functions">Hyperbolic Functions</h2>
 <p><span class="math display">\[\sinh x= \frac{e^x-e^{-x}}{2}\]</span> <span class="math display">\[\cosh{x} = \frac{e^x+e^{-x}}{2}\]</span> <span class="math display">\[\tanh{x}=\frac{\sinh x}{\cosh x} = \frac{e^x-e^{-x}}{e^x+e^{-x}}\]</span> Helpful: <span class="math inline">\(\sinh\)</span> has a negative because it’s an odd function like <span class="math inline">\(\sin\)</span>: <span class="math display">\[
 \sinh(-x)=-\sinh(x)\approx\sin(-x)=-\sin{x}
@@ -182,8 +185,9 @@ L(x)=f(a)+f&#39;(a)\cdot(x-a)
 <h3 id="numerical-value-of-cosh8">Numerical value of <span class="math inline">\(\cosh(8)\)</span></h3>
 <p><span class="math display">\[\cosh{8} = \frac{e^8+e^{-8}}{2} = \frac{2980.95799 + \frac{1}{2980.95799}}{2}=1490.47916\]</span></p>
 <h3 id="differentials-error">Differentials Error</h3>
-<p>The circumference of a sphere was measured to be <span class="math inline">\(70\text{cm}\)</span> with a possible error of <span class="math inline">\(0.5\text{cm}\)</span>. a) Use differentials to estimate the maximum error (in <span class="math inline">\(\text{cm}^2\)</span>) in the calculated surface area (round to the nearest integer). <span class="math display">\[\text{SA}=4\pi r^2\]</span> However, we have been given the circumference, so it might be convenient to rephrase in terms of circumference: <span class="math display">\[C = 2\pi r\]</span> <span class="math display">\[\text{SA}=\frac{C^2}{\pi}\]</span> <span class="math display">\[d\,\text{SA}=\frac{2}{\pi}C\,dC\]</span> We find the maximum error by substituting in the maximum possible error for the circumference and the given measurement: <span class="math display">\[E_\text{max}=d\,\text{SA}=\frac{2}{\pi}\cdot70\cdot0.5=22\text{cm}^2\]</span></p>
-<p>What is the relative error?</p>
+<p>The circumference of a sphere was measured to be <span class="math inline">\(70\text{cm}\)</span> with a possible error of <span class="math inline">\(0.5\text{cm}\)</span>.</p>
+<p><strong>a) Use differentials to estimate the maximum error (in <span class="math inline">\(\text{cm}^2\)</span>) in the calculated surface area (round to the nearest integer).</strong> <span class="math display">\[\text{SA}=4\pi r^2\]</span> However, we have been given the circumference, so it might be convenient to rephrase in terms of circumference: <span class="math display">\[C = 2\pi r\]</span> <span class="math display">\[\text{SA}=\frac{C^2}{\pi}\]</span> <span class="math display">\[d\,\text{SA}=\frac{2}{\pi}C\,dC\]</span> We find the maximum error by substituting in the maximum possible error for the circumference and the given measurement: <span class="math display">\[E_\text{max}=d\,\text{SA}=\frac{2}{\pi}\cdot70\cdot0.5=22\text{cm}^2\]</span></p>
+<p><strong>What is the relative error?</strong></p>
 <p><span class="math display">\[
 E_\text{rel}=\frac{d\,\text{SA}}{\text{SA}}=\frac{\frac{2}{\pi}C\,dC}{\frac{C^2}{\pi}}=\frac{2\,dC}{C}=\frac{2\cdot0.5}{70}=0.014
 \]</span> Alternatively, we can calculate the surface area for the measured circumference and divide directly using the maximum error from the last step: <span class="math display">\[
@@ -191,19 +195,17 @@ E_\text{rel}=\frac{d\,\text{SA}}{\text{SA}}=\frac{\frac{2}{\pi}C\,dC}{\frac{C^2}
 \]</span> <span class="math display">\[
 E_\text{rel}=\frac{d\,\text{SA}}{\text{SA}}=\frac{22}{1560}=0.014
 \]</span></p>
-<ol start="2" type="a">
-<li>Use differentials to estimate the maximum error (in <span class="math inline">\(\text{cm}^3\)</span>) in the calculated volume (round to the nearest integer).</li>
-</ol>
+<p><strong>b) Use differentials to estimate the maximum error (in <span class="math inline">\(\text{cm}^3\)</span>) in the calculated volume (round to the nearest integer).</strong></p>
 <p><span class="math display">\[V=\frac{4}{3}\pi r^3\]</span> Again in terms of circumference: <span class="math display">\[
 C^3=8\pi^3r^3
 \]</span> <span class="math display">\[V=\frac{1}{6\pi^2}C^3\]</span> <span class="math display">\[dV=\frac{1}{2\pi^2}C^2\,dC\]</span> <span class="math display">\[E_\text{max}=dV=\frac{1}{2\pi^2}(70^2)\cdot0.5=124\text{cm}^3\]</span></p>
-<p>What is the relative error? <span class="math display">\[E_\text{rel}=\frac{dV}{V}=\frac{\frac{1}{2\pi^2}C^2\,dC}{\frac{1}{6\pi^2}C^3}=\frac{3dC}{C}=\frac{3\cdot0.5}{70}=0.021\]</span> Or: <span class="math display">\[V=\frac{1}{6\pi^2}70^3=5792\text{cm}^3\]</span> <span class="math display">\[
+<p><strong>What is the relative error?</strong> <span class="math display">\[E_\text{rel}=\frac{dV}{V}=\frac{\frac{1}{2\pi^2}C^2\,dC}{\frac{1}{6\pi^2}C^3}=\frac{3dC}{C}=\frac{3\cdot0.5}{70}=0.021\]</span> Or: <span class="math display">\[V=\frac{1}{6\pi^2}70^3=5792\text{cm}^3\]</span> <span class="math display">\[
 E_\text{rel}=\frac{dV}{V}=\frac{124}{5792}=0.021
 \]</span></p>
 <h3 id="rewriting-sinh7lnx">Rewriting <span class="math inline">\(\sinh(7\ln{x})\)</span></h3>
-<p>Write <span class="math inline">\(\sinh(7\ln{x})\)</span> as a rational function of <span class="math inline">\(x\)</span>. <span class="math display">\[\sinh(7\ln x)=\frac{e^{7\ln x}-e^{-7\ln x}}{2}=\frac{(e^{\ln x})^7-(e^{\ln x})^{-7}}{2}=\frac{x^7-x^{-7}}{2}\]</span></p>
+<p><strong>Write <span class="math inline">\(\sinh(7\ln{x})\)</span> as a rational function of <span class="math inline">\(x\)</span>.</strong> <span class="math display">\[\sinh(7\ln x)=\frac{e^{7\ln x}-e^{-7\ln x}}{2}=\frac{(e^{\ln x})^7-(e^{\ln x})^{-7}}{2}=\frac{x^7-x^{-7}}{2}\]</span></p>
 <h3 id="more-hyperbolics">More hyperbolics</h3>
-<p>Write <span class="math inline">\(6\sinh{x}+3\cosh{x}\)</span> in terms of <span class="math inline">\(e^x\)</span> and <span class="math inline">\(e^{-x}\)</span>. <span class="math display">\[
+<p><strong>Write <span class="math inline">\(6\sinh{x}+3\cosh{x}\)</span> in terms of <span class="math inline">\(e^x\)</span> and <span class="math inline">\(e^{-x}\)</span>.</strong> <span class="math display">\[
 6\sinh{x}+3\cosh{x}=6\left(\frac{e^x-e^{-x}}{2}\right)+3\left(\frac{e^x+e^{-x}}{2}\right)=\frac{9e^x-3e^{-x}}{2}
 \]</span></p>
 </body>
